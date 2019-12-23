@@ -11,8 +11,8 @@ void main() async {
   await flameUtil.setOrientation(DeviceOrientation.portraitUp);
 
   TargetGameLoop game = TargetGameLoop();
-  TapGestureRecognizer tapper = TapGestureRecognizer();
-  tapper.onTapDown = game.onTapDown;
+  // TapGestureRecognizer tapper = TapGestureRecognizer();
+  // tapper.onTapDown = game.onTapDown;
   runApp(game.widget);
-  flameUtil.addGestureRecognizer(tapper);
+  //flameUtil.addGestureRecognizer(tapper);
 }

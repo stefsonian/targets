@@ -5,20 +5,16 @@ import 'package:flutter/cupertino.dart';
 
 class TargetGameLoop extends BaseGame {
   bool hasWon = false;
+  Color backgroundColor() => Color(0xFFFF54D0E4);
 
   void render(Canvas canvas) {
     // TODO: implement render
-    Rect bgRect = Rect.fromLTWH(0, 0, size.width, size.height);
-    Paint bgPaint = Paint();
-    bgPaint.color = Color(0xFFFF54D0E4);
-    canvas.drawRect(bgRect, bgPaint);
 
     double screenCenterX = size.width / 2;
     double screenCenterY = size.height / 2;
     Rect boxRect =
         Rect.fromLTWH(screenCenterX - 75, screenCenterY - 75, 150, 150);
     Paint boxPaint = Paint();
-    //boxPaint.color = Color(0xffffffff);
 
     if (hasWon) {
       boxPaint.color = Color(0xff00ff00);
